@@ -1,0 +1,19 @@
+.info_list {
+  display: flex;
+  width: 100%;
+  border-top: 2px solid rgb(128 128 128);
+}
+.info_list > li {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 3);
+  align-items: center;
+  background-color: rgb(211 211 211);
+}
+.info_list > li > :last-child {
+  font-weight: 600;
+}
+.info_list > li:not(:nth-child(3n)) {
+  border-right: 2px solid rgb(128 128 128);
+}
