@@ -1,19 +1,17 @@
+import ActiveInfoItem from "../ActiveInfoItem/ActiveInfoItem";
 import css from "./ActiveInfoList.module.css";
-const ActiveInfoList = ({ followers, views, likes }) => {
+const ActiveInfoList = (stats) => {
+  const statArr = [];
+  for (const key in stats) {
+    const statItem = [key, stats[key]];
+    statArr.push(statItem);
+  }
+
   return (
     <ul className={css.info_list}>
-      <li>
-        <span>Followers</span>
-        <span>{followers}</span>
-      </li>
-      <li>
-        <span>Views</span>
-        <span>{views}</span>
-      </li>
-      <li>
-        <span>Likes</span>
-        <span>{likes}</span>
-      </li>
+      {statArr.map((item, idx) => {
+        return <ActiveInfoItem key={idx} item={item} />;
+      })}
     </ul>
   );
 };
