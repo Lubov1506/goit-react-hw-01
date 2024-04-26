@@ -9,7 +9,6 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
     location,
     avatar,
   };
-  console.log(Object.entries(stats));
   return (
     <div className={s.wrapper}>
       <UserInfo {...dataForUserInfo} />
