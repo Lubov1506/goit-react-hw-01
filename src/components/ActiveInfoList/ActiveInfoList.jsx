@@ -1,5 +1,5 @@
 import ActiveInfoItem from "../ActiveInfoItem/ActiveInfoItem";
-import css from "./ActiveInfoList.module.css";
+import s from "./ActiveInfoList.module.css";
 const ActiveInfoList = (stats) => {
   const statArr = [];
   for (const key in stats) {
@@ -8,7 +8,7 @@ const ActiveInfoList = (stats) => {
   }
 
   return (
-    <ul className={css.info_list}>
+    <ul className={s.info_list}>
       {statArr.map((item, idx) => {
         return <ActiveInfoItem key={idx} item={item} />;
       })}

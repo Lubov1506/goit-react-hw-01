@@ -1,6 +1,6 @@
 import ActiveInfoList from "../ActiveInfoList/ActiveInfoList";
 import UserInfo from "../UserInfo/UserInfo";
-import css from "./Profile.module.css";
+import s from "./Profile.module.css";
 
 const Profile = ({ username, tag, location, avatar, stats }) => {
   const dataForUserInfo = {
@@ -10,7 +10,7 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
     avatar,
   };
   return (
-    <div className={css.wrapper}>
+    <div className={s.wrapper}>
       <UserInfo {...dataForUserInfo} />
       <ActiveInfoList {...stats} />
     </div>
